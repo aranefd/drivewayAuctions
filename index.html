@@ -441,6 +441,11 @@
     <div class="particles" id="particles"></div>
     
     <div class="container">
+        <body>
+    <div class="background-animation"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
         <div class="hero-content">
             <h1 class="logo">Driveway Auctions</h1>
             <p class="tagline">Where Project Cars Meet Their Perfect Match</p>
@@ -449,31 +454,14 @@
                 every car has a story waiting to be continued. Join the community of passionate car enthusiasts 
                 who see potential where others see problems.
             </p>
-            
+
             <a href="#" class="cta-button" onclick="redirectToApp()">
                 View Auctions
             </a>
             <p class="description">
                 List your cars for free
             </p>
-			<script>
-			function redirectToApp() {
-			fbq('track', 'Lead'); // Pixel "Lead" event
-			window.location.href = "https://your-redirect-url.com"; // replace with actual URL
-			}
-			</script>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🔧</div>
-                    <div class="feature-text">Project Cars</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🏁</div>
-                    <div class="feature-text">High Mileage Heroes</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <div class="feature-text">Live Auctions</div>
+
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">🔧</div>
@@ -490,6 +478,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Facebook Lead Tracking Script -->
+    <script>
+        function redirectToApp() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
+            }
+            setTimeout(function () {
+                window.location.href = "https://carauctionsonline.flutterflow.app/"; // Replace with your actual destination
+            }, 300); // 300ms delay to ensure the event is sent
+        }
+    </script>
+</body>
+
 
     <section class="why-section">
         <h2 class="why-title">Why I Created Driveway Auctions</h2>
